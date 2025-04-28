@@ -1,0 +1,201 @@
+crop,max_temp,min_temp,max_humidity,min_humidity,max_rainfall,min_rainfall
+Rice (Basmati),42,20,95,60,250,5
+Rice (Sona Masoori),42,20,93,58,240,5
+Rice (IR64),40,20,92,55,230,5
+Rice (Ponni),42,20,95,60,250,5
+Rice (Ponni Samba),42,20,95,60,250,5
+Wheat (North Indian),30,7,85,40,100,1
+Wheat (Rabi),30,7,80,35,90,1
+Maize (Field Corn),35,15,85,50,200,10
+Maize (Sweet Corn),35,15,85,50,190,10
+Barley (Malt Barley),30,5,80,45,120,2
+Sorghum (Jowar),42,18,90,50,180,5
+Pearl Millet (Bajra),45,20,88,45,150,3
+Finger Millet (Ragi),38,15,85,50,140,2
+Foxtail Millet,40,18,85,45,150,3
+Proso Millet,40,18,85,45,150,3
+Kodo Millet,42,18,85,45,150,3
+Little Millet,42,18,85,45,150,3
+Chickpea (Kabuli Chana),38,10,80,40,100,1
+Chickpea (Desi Chana),38,10,80,40,100,1
+Pigeon Pea (Toor Dal),40,15,85,45,150,2
+Black Gram (Urad Dal),38,15,85,45,140,2
+Green Gram (Moong Dal),40,15,85,45,140,2
+Lentil (Masoor Dal),35,5,80,40,110,1
+Cowpea (Lobia),42,18,90,45,160,2
+Moth Bean,42,20,90,40,150,2
+Horse Gram,40,15,85,40,140,1
+Field Pea,30,10,80,45,100,2
+Kidney Bean,38,15,85,45,130,2
+Soybean,38,15,85,45,140,2
+Mustard (Oilseed),38,7,80,40,90,1
+Sunflower,40,10,75,35,80,1
+Sesame (Til),42,15,80,40,100,1
+Groundnut (Peanut),38,20,80,40,120,2
+Safflower,42,15,70,30,60,1
+Castor,40,15,75,40,90,1
+Linseed (Flax),35,10,80,45,80,2
+Mango (Alphonso),46,10,90,40,200,5
+Mango (Dasheri),46,10,88,40,190,5
+Mango (Langra),46,10,90,40,200,5
+Banana (Robusta),35,20,90,70,180,20
+Banana (Dwarf Cavendish),35,20,90,70,180,20
+Guava (Allahabad Safeda),40,10,85,50,150,5
+Papaya (Solo),38,15,85,50,140,10
+Orange (Nagpur),38,7,80,45,100,2
+Lemon (Meyer),40,10,80,45,100,2
+Apple (Kashmiri),30,-2,90,60,80,2
+Apple (Himachal),30,-2,90,60,80,2
+Pomegranate (Bhagwa),40,8,80,50,120,2
+Grapes (Thomson Seedless),40,10,85,50,110,2
+Sapota (Chikoo),40,15,85,55,130,2
+Jackfruit,40,15,90,60,150,2
+Custard Apple (Sitaphal),38,16,85,55,140,2
+Lychee,40,10,90,60,130,2
+Amla (Indian Gooseberry),38,10,85,50,120,2
+Avocado (Local),35,10,85,50,100,2
+Watermelon,40,15,80,50,120,5
+Potato (Kufri Jyoti),30,2,90,70,90,1
+Tomato (Hybrid),38,12,85,50,100,2
+Onion (Red),35,10,85,50,90,2
+Onion (White),35,10,85,50,90,2
+Eggplant (Brinjal),38,15,85,50,100,2
+Okra (Lady's Finger),40,18,85,50,100,2
+Cabbage,30,5,90,60,80,2
+Cauliflower,30,5,90,60,80,2
+Spinach (Palak),35,10,90,50,100,2
+Carrot (Imperator),30,5,80,50,70,2
+Radish (Daikon),30,8,85,50,70,2
+Beetroot,30,5,85,50,70,2
+Cucumber,38,15,85,55,90,2
+Bitter Gourd,38,18,85,55,90,2
+Bottle Gourd,38,18,85,55,90,2
+Pumpkin,38,15,85,50,100,2
+Ash Gourd,38,15,85,55,90,2
+Green Chili,40,20,80,50,80,2
+Red Chili,40,20,80,50,80,2
+Ginger,35,15,90,60,140,5
+Garlic,35,10,85,55,100,2
+Turmeric,38,15,90,60,150,5
+Black Pepper (Malabar),32,15,95,70,220,10
+Cardamom (Large),32,15,95,70,220,10
+Cardamom (Small),32,15,95,70,220,10
+Clove,30,15,90,70,200,10
+Cinnamon,35,15,90,65,180,10
+Saffron,25,-5,60,30,30,0
+Coriander (Seeds),35,10,80,50,90,2
+Cumin,40,15,75,45,80,1
+Fennel,38,15,80,50,90,2
+Fenugreek (Seeds),35,10,80,50,80,2
+Curry Leaves,38,15,85,55,100,2
+Mint (Pudina),35,10,85,50,90,2
+Asafoetida (Hing),38,15,75,50,80,2
+Napier Grass,40,18,85,50,150,5
+Sudan Grass,40,18,85,50,150,5
+Rhodes Grass,40,18,85,50,150,5
+Lucerne (Alfalfa),35,5,80,50,100,2
+Sugarcane,40,15,90,60,160,10
+Tea (Assam),30,10,90,70,120,5
+Tea (Darjeeling),28,5,90,70,110,5
+Coffee (Arabica),32,15,85,60,200,10
+Rubber,35,20,90,70,250,15
+Coconut,35,20,90,70,220,15
+Arecanut,35,20,90,70,220,15
+Cocoa,32,18,90,70,240,15
+Tobacco,38,15,80,50,100,5
+Cotton,42,20,75,45,120,2
+Jute,38,20,90,70,150,10
+Snake Gourd,38,20,85,55,100,2
+Ridge Gourd,38,20,85,55,100,2
+Ivy Gourd,38,20,85,55,100,2
+Drumstick (Moringa),38,20,80,50,100,2
+Taro (Arbi),35,15,85,55,120,2
+Sweet Potato,38,15,85,55,110,2
+French Bean,35,15,85,55,90,2
+Cluster Bean (Guar),40,20,80,50,80,1
+Broccoli,28,5,90,60,100,2
+Bell Pepper (Capsicum),35,15,85,55,90,2
+Zucchini,35,15,85,55,90,2
+Winter Squash,38,15,85,55,100,2
+Amaranth (Grain Amaranth),40,20,80,50,120,2
+Buckwheat (Kuttu),30,5,80,50,80,2
+Tapioca (Cassava),35,20,85,60,150,2
+Arrowroot,35,15,80,50,100,2
+Yam (Dioscorea),38,20,85,60,120,2
+Rice Bean,38,20,85,55,110,2
+Black Eyed Pea,38,20,80,50,100,2
+Red Lentil (Puy Lentil),35,5,80,45,90,2
+Turnip,30,5,85,50,80,2
+Kohlrabi,30,5,85,50,80,2
+Bay Leaf (Tej Patta),35,10,85,55,100,2
+Sarsaparilla,35,15,80,50,90,2
+Tulsi (Holy Basil),38,15,85,55,100,2
+Lemongrass,38,15,85,55,100,2
+Mustard Greens,35,10,80,50,80,2
+Fenugreek Leaves,35,10,80,50,80,2
+Bitter Leaf (Vernonia),38,15,85,55,100,2
+Malabar Spinach,38,20,85,55,100,2
+Amaranth Leaves,38,20,85,55,100,2
+Chayote,38,20,85,55,90,2
+Water Spinach (Kang Kong),38,20,85,55,90,2
+Parsley,30,10,80,50,70,2
+Coriander Leaves,30,10,80,50,70,2
+Jamun,40,15,85,55,130,2
+Bael (Wood Apple),40,15,85,55,140,2
+Carambola (Star Fruit),38,15,85,55,120,2
+Passion Fruit,38,15,85,55,120,2
+Pear (Indian Pear),35,5,85,55,90,2
+Plum (Indian Plum),35,5,85,55,90,2
+Oats (Himalayan Oats),28,5,85,60,80,2
+Rye,28,5,85,60,80,2
+Quinoa,30,8,80,50,80,2
+Samai Millet,42,18,85,45,150,3
+Rice (Red Matta),42,20,95,60,250,5
+Barley (Feed Barley),30,5,80,45,100,2
+Maize (Flint Corn),35,15,85,50,190,10
+Maize (Dent Corn),35,15,85,50,190,10
+Wheat (Hard Red),30,7,85,50,100,1
+Wheat (Soft),30,7,85,50,100,1
+Chickpea (Special),38,10,80,40,100,1
+Tea (Nilgiri),30,10,90,70,115,5
+Tea (Dooars),30,10,90,70,115,5
+Coffee (Robusta),36,20,85,65,210,10
+Cocoa (Forastero),32,18,90,70,240,15
+Coconut (Tall),35,20,90,70,220,15
+Coconut (Dwarf),35,20,90,70,220,15
+Arecanut (Yellow),35,20,90,70,220,15
+Arecanut (Red),35,20,90,70,220,15
+Jute (White),38,20,90,70,150,10
+Jute (Tossa),38,20,90,70,150,10
+Sugarcane (Coarse),40,15,90,60,160,10
+Sugarcane (Fine),40,15,90,60,160,10
+Cotton (Bt Cotton),42,20,75,45,120,2
+Cotton (Non-Bt),42,20,75,45,120,2
+Tobacco (Flue-cured),38,15,80,50,100,5
+Tobacco (Sun-cured),38,15,80,50,100,5
+Cashew,38,20,85,60,150,10
+Almond,30,-1,85,60,80,2
+Pistachio,40,5,80,50,80,2
+Hemp,35,15,80,50,100,2
+Luffa,38,20,85,55,90,2
+Sorghum (Hybrid),42,18,90,50,180,5
+Rice (Hybrid),42,20,95,60,250,5
+Wheat (Hybrid),30,7,85,50,100,1
+Maize (Hybrid),35,15,85,50,190,10
+Rice (Organic),42,20,95,60,250,5
+Wheat (Organic),30,7,85,50,100,1
+Maize (Organic),35,15,85,50,190,10
+Tomato (Cherry),38,12,85,50,100,2
+Cucumber (Mini),38,15,85,55,90,2
+Bell Pepper (Sweet),35,15,85,55,90,2
+Eggplant (White),38,15,85,50,100,2
+Spinach (Savoy),35,10,90,50,100,2
+Carrot (Nantes),30,5,80,50,70,2
+Radish (Cherry Belle),30,8,85,50,70,2
+Bitter Gourd (Hybrid),38,18,85,55,100,2
+Okra (Hybrid),40,18,85,50,100,2
+Cabbage (Hybrid),30,5,90,60,80,2
+Cauliflower (Hybrid),30,5,90,60,80,2
+Spinach (Baby),35,10,90,50,100,2
+Tomato (Heirloom),38,12,85,50,100,2
+Chili (Bird's Eye),40,20,80,50,80,2

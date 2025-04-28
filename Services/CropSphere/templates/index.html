@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🌱 Your Crop Companion: Grow Smarter, Not Harder</h1>
+        <form id="cropForm">
+            <div class="form-group">
+                <label for="pincode">Enter Your PIN Code:</label>
+                <div id="inputBox">
+                    <input type="text" id="pincode" name="pincode" required>
+                </div>
+            </div>
+            <div id="formButton">
+                <button type="submit">Get Recommendations</button>
+            </div>
+        </form>
+        <div id="result"></div>
+        <div id="chartContainer">
+            <canvas id="weatherChart"></canvas>
+        </div>
+        <div id="carePlan" style="width:600px; margin:20px auto;"></div>        
+    </div>
+    <script type="module" src="static/scripts.js"></script>
+</body>
+</html>
