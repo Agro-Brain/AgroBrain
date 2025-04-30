@@ -17,7 +17,7 @@ const teamMembers = [
     linkedin: "https://www.linkedin.com/in/debjyotishit/",
     github: "https://github.com/Debjyoti2004",
     email: "mailto:debjyotishit27@gmail.com",
-},
+  },
   {
     name: "Sujoy",
     role: "ML engineer",
@@ -44,31 +44,30 @@ const Team = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const newRotation = (scrollPosition % 360) * 0.5;
-      setRotation(newRotation);
+      setRotation((scrollPosition % 360) * 0.5);
     };
 
     const handleVisibility = () => {
-      const element = document.getElementById('team-section');
+      const element = document.getElementById("team-section");
       if (element) {
         const rect = element.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
-        setIsVisible(isVisible);
+        setIsVisible(rect.top < window.innerHeight && rect.bottom >= 0);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('scroll', handleVisibility);
-    handleVisibility(); 
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleVisibility);
+    handleVisibility();
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('scroll', handleVisibility);
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleVisibility);
     };
   }, []);
 
   return (
     <div id="team-section" className="relative py-20 min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+      {/* Decorative Background */}
       <div className="overflow-hidden absolute inset-0">
         <div className="absolute w-full h-full bg-[url('/grid.png')] opacity-5"></div>
         <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-green-100 to-transparent rounded-full opacity-20 blur-3xl"></div>
@@ -84,7 +83,38 @@ const Team = () => {
             Dedicated professionals working together to bring innovation and excellence to every project.
           </p>
         </div>
-        <div className="flex relative justify-center items-center">
+
+        {/* Mobile Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:hidden">
+          {teamMembers.map((member, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center text-center bg-white p-6 rounded-xl shadow-lg transition-all hover:scale-105"
+            >
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-md mb-4"
+              />
+              <h3 className="text-xl font-bold text-gray-800">{member.name}</h3>
+              <p className="text-sm text-gray-600">{member.role}</p>
+              <div className="flex justify-center mt-3 space-x-4">
+                <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin size={22} className="text-blue-600 hover:text-blue-800" />
+                </a>
+                <a href={member.github} target="_blank" rel="noopener noreferrer">
+                  <FaGithub size={22} className="text-gray-700 hover:text-black" />
+                </a>
+                <a href={member.email}>
+                  <FaEnvelope size={22} className="text-red-500 hover:text-red-700" />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Circular Layout for md+ */}
+        <div className="hidden md:flex relative justify-center items-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
             <div className="relative w-[600px] h-[600px] mx-auto">
               {teamMembers.map((member, index) => {
@@ -108,40 +138,27 @@ const Team = () => {
                     <div className={`group relative transition-all duration-300 ${
                       hoveredMember === index ? 'scale-110' : 'scale-100'
                     }`}>
-                      <div className="overflow-hidden w-32 h-32 rounded-full border-4 border-white shadow-lg transition-transform duration-300 group-hover:border-green-400">
+                      <div className="overflow-hidden w-32 h-32 rounded-full border-4 border-white shadow-lg">
                         <img
                           src={member.image}
                           alt={member.name}
                           className="object-cover w-full h-full"
                         />
                       </div>
-                      
+
                       {hoveredMember === index && (
-                        <div className="absolute -bottom-24 left-1/2 p-4 w-64 text-center bg-white rounded-xl shadow-2xl transform -translate-x-1/2">
+                        <div className="absolute -bottom-28 left-1/2 p-4 w-64 text-center bg-white rounded-xl shadow-2xl transform -translate-x-1/2">
                           <h3 className="mb-1 text-xl font-bold text-gray-800">{member.name}</h3>
-                          <p className="mb-3 text-sm text-gray-600">{member.role}</p>
+                          <p className="mb-2 text-sm text-gray-600">{member.role}</p>
                           <div className="flex justify-center space-x-4">
-                            <a
-                              href={member.linkedin}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-blue-500 transition-colors hover:text-blue-600"
-                            >
-                              <FaLinkedin size={24} />
+                            <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                              <FaLinkedin size={24} className="text-blue-600 hover:text-blue-800" />
                             </a>
-                            <a
-                              href={member.github}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-gray-700 transition-colors hover:text-gray-900"
-                            >
-                              <FaGithub size={24} />
+                            <a href={member.github} target="_blank" rel="noopener noreferrer">
+                              <FaGithub size={24} className="text-gray-800 hover:text-black" />
                             </a>
-                            <a
-                              href={member.email}
-                              className="text-red-500 transition-colors hover:text-red-600"
-                            >
-                              <FaEnvelope size={24} />
+                            <a href={member.email}>
+                              <FaEnvelope size={24} className="text-red-500 hover:text-red-700" />
                             </a>
                           </div>
                         </div>
@@ -161,6 +178,7 @@ const Team = () => {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );
