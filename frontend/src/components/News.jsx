@@ -16,7 +16,7 @@ const News = () => {
             q: "sustainable farming",
             lang: "en",
             country: "us",
-            max: 3,
+            max: 6,
             apikey: import.meta.env.VITE_NEWS_API_KEY,
           },
         });
@@ -132,20 +132,6 @@ const News = () => {
             </motion.div>
           )}
         </AnimatePresence>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="mt-12 text-center"
-        >
-          <a
-            href="/news"
-            className="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-green-700 rounded-lg transition-all duration-300 hover:bg-green-800 hover:shadow-lg"
-          >
-            Explore More Insights
-            <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
-          </a>
-        </motion.div>
       </div>
     </section>
   );
