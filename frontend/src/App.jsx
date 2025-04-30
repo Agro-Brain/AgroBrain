@@ -18,14 +18,12 @@ import CropDiseaseDetection from "./components/CropDiseaseDetection";
 function App() {
   return (
     <Auth0Provider
-    domain="dev-wcbj6ku3e6hjqg6e.us.auth0.com"
-    clientId="TQbRv1GmH6is98RULl6cciktkdTdgOo7"
+    domain={import.meta.env.VITE_AUTH0_DOMAIN}
+    clientId={import.meta.env.VITE_AUTH0_CLIENT_ID}
     authorizationParams={{
-      redirect_uri: window.location.origin
+      redirect_uri: window.location.origin,
+      audience: import.meta.env.VITE_AUTH0_AUDIENCE
     }}
-  audience="https://dev-wcbj6ku3e6hjqg6e.us.auth0.com/api/v2/"
-  useRefreshTokens
-  cacheLocation="localstorage"
   >
       <BrowserRouter>
         <Routes>
