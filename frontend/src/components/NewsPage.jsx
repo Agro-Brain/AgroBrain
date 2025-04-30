@@ -17,7 +17,7 @@ const News = () => {
             lang: "en",
             country: "us",
             max: 15,
-            apikey: import.meta.env.VITE_NEWS_API_KEY,
+            apikey: import.meta.env.VITE_NEWS_API_KEY1,
           },
         });
         setNews(response.data.articles);        
