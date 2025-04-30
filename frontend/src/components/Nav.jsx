@@ -87,10 +87,10 @@ const Navbar = () => {
                     </div>
                     <div className="border-t border-gray-100">
                       <button
-                        onClick={() => navigate("/dashboard")}
+                        onClick={() => navigate("/")}
                         className="block w-full px-4 py-2.5 text-sm text-left text-gray-700 transition-colors hover:bg-gray-50"
                       >
-                        Dashboard
+                        Dashboard-coming soon
                       </button>
                       <button
                         onClick={() => logout({ returnTo: window.location.origin })}
@@ -149,10 +149,10 @@ const Navbar = () => {
                 {isAuthenticated ? (
                   <>
                     <button
-                      onClick={() => navigate("/dashboard")}
+                      onClick={() => navigate("/")}
                       className="w-full px-4 py-2.5 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800"
                     >
-                      Dashboard
+                      Dashboard-coming soon
                     </button>
                     <button
                       onClick={() => logout({ returnTo: window.location.origin })}

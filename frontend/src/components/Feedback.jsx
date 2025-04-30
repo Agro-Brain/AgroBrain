@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
 import { FaLeaf, FaUser, FaEnvelope, FaCommentDots } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
@@ -12,8 +11,6 @@ const FeedbackForm = () => {
     message: "",
   });
 
-  const [loading, setLoading] = useState(false);
-
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -21,22 +18,9 @@ const FeedbackForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_USER_ID")
-      .then(
-        (result) => {
-          toast.success("🌱 Feedback successfully submitted! We'll respond within 24 hours");
-          setFormData({ name: "", email: "", message: "" });
-        },
-        (error) => {
-          toast.error("⚠️ Failed to send feedback. Please try again later");
-        }
-      )
-      .finally(() => setLoading(false));
+  const handleSuccess = () => {
+    toast.success("🌱 Feedback successfully submitted!");
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
@@ -60,15 +44,22 @@ const FeedbackForm = () => {
         </div>
 
         <div className="grid items-center gap-10 lg:grid-cols-2">
-     
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             className="p-8 bg-white border border-green-100 shadow-xl rounded-2xl"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+              action="https://formsubmit.co/agrobrain.ai@gmail.com"
+              method="POST"
+              onSubmit={handleSuccess}
+              className="space-y-6"
+            >
+              {/* Disable captcha and redirect on submit */}
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value={window.location.href} />
+
               <div className="space-y-4">
-               
                 <div className="relative">
                   <FaUser className="absolute text-green-600 top-4 left-4" />
                   <input
@@ -82,7 +73,6 @@ const FeedbackForm = () => {
                   />
                 </div>
 
-               
                 <div className="relative">
                   <FaEnvelope className="absolute text-green-600 top-4 left-4" />
                   <input
@@ -96,7 +86,6 @@ const FeedbackForm = () => {
                   />
                 </div>
 
-         
                 <div className="relative">
                   <FaCommentDots className="absolute text-green-600 top-4 left-4" />
                   <textarea
@@ -106,6 +95,7 @@ const FeedbackForm = () => {
                     placeholder="Your agricultural insights..."
                     className="w-full h-40 py-3 pl-12 pr-4 transition-all border border-green-200 rounded-lg outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
                     required
+                    maxLength={500}
                   />
                   <span className="absolute text-sm text-gray-400 bottom-2 right-3">
                     {formData.message.length}/500
@@ -117,25 +107,14 @@ const FeedbackForm = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                disabled={loading}
                 className="flex items-center justify-center w-full gap-2 px-6 py-4 font-medium text-white transition-colors bg-green-700 rounded-lg hover:bg-green-800"
               >
-                {loading ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-white rounded-full animate-spin border-t-transparent" />
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <FaLeaf className="text-lg" />
-                    Submit Feedback
-                  </>
-                )}
+                <FaLeaf className="text-lg" />
+                Submit Feedback
               </motion.button>
             </form>
           </motion.div>
 
-          
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
