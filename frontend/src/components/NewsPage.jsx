@@ -17,13 +17,13 @@ const NewsPage = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await axios.get(API_URL, {
+        const response = await axios.get("https://gnews.io/api/v4/search", {
           params: {
             q: "technology",  // You can change this to any search keyword
             lang: "en",       // Language is set to English
             country: "us",    // You can change the country as needed
             max: 27,           // Limit the number of articles
-            apikey: API_KEY,  // Use your API key here
+            apikey: import.meta.env.VITE_NEWS_API_KEY,  // Use your API key here
           },
         });
         setNewsArticles(response.data.articles);
