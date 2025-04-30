@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaLeaf, FaUser, FaEnvelope, FaCommentDots } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 const FeedbackForm = () => {
   const [formData, setFormData] = useState({
@@ -24,7 +24,10 @@ const FeedbackForm = () => {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-b from-green-50 to-white" id="contact">
+    <section
+      className="py-16 bg-gradient-to-b from-green-50 to-white"
+      id="contact"
+    >
       <div className="container max-w-6xl px-4 mx-auto">
         <div className="mb-12 text-center">
           <motion.div
@@ -52,12 +55,15 @@ const FeedbackForm = () => {
             <form
               action="https://formsubmit.co/agrobrain.ai@gmail.com"
               method="POST"
-              onSubmit={handleSuccess}
               className="space-y-6"
             >
               {/* Disable captcha and redirect on submit */}
               <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value={window.location.href} />
+              <input
+                type="hidden"
+                name="_next"
+                value={typeof window !== "undefined" ? window.location.href : ""}
+              />
 
               <div className="space-y-4">
                 <div className="relative">
@@ -107,6 +113,11 @@ const FeedbackForm = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
+                onClick={() => {
+                  setTimeout(() => {
+                    handleSuccess();
+                  }, 300); // Delay to allow FormSubmit to process form
+                }}
                 className="flex items-center justify-center w-full gap-2 px-6 py-4 font-medium text-white transition-colors bg-green-700 rounded-lg hover:bg-green-800"
               >
                 <FaLeaf className="text-lg" />
@@ -130,9 +141,9 @@ const FeedbackForm = () => {
                 Why Your Feedback Matters
               </h3>
               <p className="leading-relaxed text-green-100">
-                At AgroTech, we believe in growing together. Your experiences shape our
-                agricultural solutions, helping us develop smarter tools for sustainable
-                farming and crop management.
+                At AgroTech, we believe in growing together. Your experiences
+                shape our agricultural solutions, helping us develop smarter
+                tools for sustainable farming and crop management.
               </p>
             </div>
           </motion.div>
