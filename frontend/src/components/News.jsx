@@ -11,15 +11,16 @@ const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await axios.get("https://newsapi.org/v2/everything", {
+        const response = await axios.get("https://gnews.io/api/v4/search", {
           params: {
-            q: "agriculture sustainable farming",
-            sortBy: "publishedAt",
-            pageSize: 3,
-            apiKey: import.meta.env.VITE_NEWS_API_KEY,
+            q: "sustainable farming",
+            lang: "en",
+            country: "us",
+            max: 3,
+            apikey: import.meta.env.VITE_NEWS_API_KEY,
           },
         });
-        setNews(response.data.articles);
+        setNews(response.data.articles);        
         setLoading(false);
       } catch (error) {
         console.error("Error fetching news:", error);
