@@ -4,7 +4,7 @@ import { ChevronDown } from "react-feather";
 
 const HeroSection = () => {
   return (
-    <div className="overflow-hidden relative w-full h-[45vh] sm:h-[80vh] md:h-screen">
+    <div className="overflow-hidden relative w-full h-[35vh] sm:h-[80vh] md:h-screen">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
