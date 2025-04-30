@@ -19,11 +19,11 @@ const NewsPage = () => {
             q: "sustainable farming",
             lang: "en",
             country: "us",
-            max: 9, // Increased to show more articles
+            max: 3,
             apikey: import.meta.env.VITE_NEWS_API_KEY,
           },
         });
-        setNews(response.data.articles);
+        setNews(response.data.articles);        
         setLoading(false);
       } catch (error) {
         console.error("Error fetching news:", error);
