@@ -16,8 +16,8 @@ const HeroSection = () => {
           preload="auto"
           poster="/video-poster.jpg" 
         >
-          <source src="./../public/agrobrain.mp4" type="video/mp4" />
-          <source src="./../public/agrobrain.mp4" type="video/webm" />
+          <source src="/agrobrain.mp4" type="video/mp4" />
+          <source src="/agrobrain.mp4" type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </div>
