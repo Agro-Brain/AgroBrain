@@ -17,14 +17,14 @@ import CropDiseas from "./components/CropDiseas";
 import CropDiseaseDetection from "./components/CropDiseaseDetection";
 function App() {
   return (
-    <Auth0Provider
-    domain={import.meta.env.VITE_AUTH0_DOMAIN}
-    clientId={import.meta.env.VITE_AUTH0_CLIENT_ID}
-    authorizationParams={{
-      redirect_uri: window.location.origin,
-      audience: import.meta.env.VITE_AUTH0_AUDIENCE
-    }}
-  >
+   <Auth0Provider
+  domain={import.meta.env.VITE_AUTH0_DOMAIN}
+  clientId={import.meta.env.VITE_AUTH0_CLIENT_ID}
+  authorizationParams={{
+    redirect_uri: window.location.origin,
+    audience: import.meta.env.VITE_AUTH0_AUDIENCE
+  }}
+>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Page1 />} />

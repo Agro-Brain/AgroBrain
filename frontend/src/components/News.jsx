@@ -16,7 +16,7 @@ const News = () => {
             q: "agriculture sustainable farming",
             sortBy: "publishedAt",
             pageSize: 3,
-            apiKey: process.env.NEWS_API_KEY,
+            apiKey: import.meta.env.VITE_NEWS_API_KEY,
           },
         });
         setNews(response.data.articles);
