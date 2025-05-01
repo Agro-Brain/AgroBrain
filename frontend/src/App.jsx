@@ -29,15 +29,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Page1 />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/news" element={<NewsPage/>} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/weather" element={<Weather/>} />
-          <Route path="/Fields" element={<Fields/>} />
           <Route path="/services/crop-recommendation" element={<Recomendations />} />
-          <Route path="/CropRecommendations" element={<CropRecommendations/>} />
-          <Route path="/diseases" element={<Disease/>} />
           <Route path="/services/disease-predictor" element={<CropDiseas />} />
-          <Route path="/fertilizers" element={<FertilizerRecommendation />} />
           <Route path="*" element={<NotFound/>} />
         </Routes>
       </BrowserRouter>
