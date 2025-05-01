@@ -68,13 +68,13 @@ const Team = () => {
   return (
     <div id="team-section" className="relative py-20 min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Decorative Background */}
-      <div className="overflow-hidden absolute inset-0">
+      <div className="pointer-events-none z-0 overflow-hidden absolute inset-0">
         <div className="absolute w-full h-full bg-[url('/grid.png')] opacity-5"></div>
         <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-gradient-to-br from-green-100 to-transparent rounded-full opacity-20 blur-3xl"></div>
         <div className="absolute right-0 bottom-0 w-1/2 h-1/2 bg-gradient-to-tl from-blue-100 to-transparent rounded-full opacity-20 blur-3xl"></div>
       </div>
 
-      <div className="container px-4 mx-auto">
+      <div className="container px-4 mx-auto relative z-10">
         <div className="mb-16 text-center">
           <h1 className="mb-4 text-4xl font-bold text-gray-800 md:text-5xl">
             Meet Our <span className="text-[#5DB996]">Team</span>
@@ -105,7 +105,7 @@ const Team = () => {
                 <a href={member.github} target="_blank" rel="noopener noreferrer">
                   <FaGithub size={22} className="text-gray-700 hover:text-black" />
                 </a>
-                <a href={member.email}>
+                <a href={member.email} target="_blank" rel="noopener noreferrer">
                   <FaEnvelope size={22} className="text-red-500 hover:text-red-700" />
                 </a>
               </div>
@@ -157,7 +157,7 @@ const Team = () => {
                             <a href={member.github} target="_blank" rel="noopener noreferrer">
                               <FaGithub size={24} className="text-gray-800 hover:text-black" />
                             </a>
-                            <a href={member.email}>
+                            <a href={member.email} target="_blank" rel="noopener noreferrer">
                               <FaEnvelope size={24} className="text-red-500 hover:text-red-700" />
                             </a>
                           </div>
