@@ -6,8 +6,22 @@ Agrobrain is a smart agriculture platform that integrates weather forecasting, s
 
 ## 🗂️ Project Structure
 
-<pre lang="bash"><code> Agrobrain/ │ ├── Frontend/ │ └── [React-based web application] │ ├── Backend/ │ └── [API gateway or central logic layer] │ ├── Services/ │ ├── Crop Recommendation/ # PIN-based crop & weather forecast module │ ├── CropSphere/ # Weather-based general crop suggestion │ ├── Farm-GPT-AI-Powered-Fertilizer-Recommendation-System/ # NPK analysis model │ └── Plant Disease Detection/ # Plant disease classification with Gemini API │ └── README.md </code></pre>
 
+### Key Features:
+- **Frontend**: React-based UI  
+- **Backend**: Central API gateway  
+- **Services**:
+  - `Crop Recommendation`: Location-specific crops  
+  - `CropSphere`: Weather-based recommendations  
+  - `Farm-GPT`: AI fertilizer advisor  
+  - `Plant Disease Detection`: Image diagnosis system  
+
+---
+
+### How to Use:
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/yourusername/Agrobrain.git
 ---
 
 ## 🧠 Modules
